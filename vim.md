@@ -102,16 +102,18 @@ Matching Parenthesis Search
 Type `%` to find a matching ), ], or }
 
 Substitute Command
-Type ‘:s/old/new/g’ to substitute new for old in a line (all occurrences)
-- To change every occurrence in the whole file: :%s/old/new/g or for confirmation :%s/old/new/gc
+Type `:s/old/new/g` to substitute new for old in a line (all occurrences)
+- To change every occurrence in the whole file: `:%s/old/new/g` or for confirmation `:%s/old/new/gc`
+
+---
 
 ### Miscellaneous
 
-Execute external command:
-Enter “:!” Then type in any command
+**Execute external command**
+Enter `:!` Then type in any command
 
 Selecting Text to write
-- Type ‘v’ and move the cursor to highlight texts you want to write
+- Type `v` and move the cursor to highlight texts you want to write
 - Press the “:” and type “w TEST”
 It should write the selected lines to the file TEST
 

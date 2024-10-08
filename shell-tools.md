@@ -31,12 +31,10 @@ What makes shell scripting different from other scripting programming languages 
 
 
 What does source do?
-
-
 Commands will often return output using STDOUT, errors through STDERR, and return code to report errors 
 - Value of 0 means it went OK anything else an error occurred 
 
-Command substitution
+
 Process substitution 
 <( CMD ) will execute CMD and place the output in a temporary file and substitute the <() with that file’s name
 - Useful when commands expect values to be passed by file instead of by STDIN
@@ -45,24 +43,23 @@ Process substitution
 When launching scripts, often want to provide arguments that are similar, Bash has ways to make this easier
 - Expanding expressions by carrying out filename expansion -> shell globbing
 
-Wildcards -> can use ? And *. To many one or any amount of characters respectively
+Wildcards -> can use ? And *. 
 Curly braces -> whenever you have a common substring in a series of commands, you can use curly braces for bash to expand this automatically 
+
+```bash
 convert image.{png,jpg}
 # expands to image.png image.jpg
 
 mv *{.py,.sh} folder
 will move all *.py and *.s files
-
+```
 
 
 There are tools such as spellcheck that will help find errors in bash scripts
 It is good practice to write shebang lines using the (env) command that will resolve to wherever the command lives in the system, increasing portability of your scripts
 - ENV makes use of the PATH environment variable
-* #!/usr/bin/env python
+- `#!/usr/bin/env python`
 
-
-STOPPED AT MINUTE 28 
-https://www.youtube.com/watch?v=kgII-YWo3Zw
 
 
 Finding how to use commands

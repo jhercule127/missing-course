@@ -34,35 +34,35 @@ Vim is a programming language
 
 ### Movement
 You should spent most of your time in Normal time
-- Basic Movement ‘hjkl’ (left,down,up,right)
+- Basic Movement `hjkl` (left,down,up,right)
 - Words: w (next word), b (beginning of word), e (end of word)
 - Lines: 0 (beginning of line), ^ (first non-blank character), $ (end of line)
 - Screen: H (top of screen), M (middle of screen), L (bottom of screen)
-- Scroll: Ctrl-u (up), Ctrl-d (down)
-- File: gg (beginning of file), G (end of file)
+- Scroll: `Ctrl-u` (up), `Ctrl-d` (down)
+- File: `gg` (beginning of file), `G` (end of file)
 
 
 ### Editing commands
 
 Commands:
-- Enter ‘o/O’ to insert line below or above
-- Enter ‘d{motion}’ to delete something
-* e.g. dw is delete word, d$ is delete to end of line, d0 is delete to beginning of line
+- Enter `o/O` to insert line below or above
+- Enter `d{motion}` to delete something
+- e.g. dw is delete word, d$ is delete to end of line, d0 is delete to beginning of line
 c{motion} change {motion}
-- Use ‘dd’ to delete whole line
-* e.g. cw is change word
-* like d{motion} followed by i
-* x delete character (equal do dl)
-* s substitute character (equal to cl)
+- Use `dd` to delete whole line
+- e.g. `cw` is change word
+- like d{motion} followed by i
+- x delete character (equal do dl)
+- s substitute character (equal to cl)
 
-How to copy and paste
+**How to copy and paste?**
 y to copy / “yank” (some other commands like d also copy)
 - p to paste
 
 You can highlight words in Visual mode and then copy/paste. To copy a whole line use ‘yy’ 
 
-Use ‘u’ to redo last command, use ‘U’ to fix a whole line
-Use ‘Ctrl + R’ to redo commands
+Use `u` to redo last command, use ‘U’ to fix a whole line
+Use `Ctrl + R` to redo commands
 
 Visual modes:
 Are for selecting chunks of texts

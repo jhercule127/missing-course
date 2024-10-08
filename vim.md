@@ -57,6 +57,16 @@ c{motion} change {motion}
 - x delete character (equal do dl)
 - s substitute character (equal to cl)
 
+### Modifiers
+You can use modifiers to change the meaning of a noun. Some modifiers are `i`, which means "inner" or "inside"
+, and `a` which means "around"
+
+- `ci(` change the contents inside the current pair of parentheses
+- `ci[` change the contents inside the current pair of square brackets
+- `da'` delete a single quoted string, including the surrounding single quotes
+
+### Visual Mode
+
 **How to copy and paste?**
 
 Press `y` to copy / “yank” (some other commands like d also copy)
@@ -67,29 +77,29 @@ You can highlight words in Visual mode and then copy/paste. To copy a whole line
 Use `u` to redo last command, use ‘U’ to fix a whole line
 Use `Ctrl + R` to redo commands
 
-Visual modes:
+**Visual modes**
 Are for selecting chunks of texts
-* Visual: v
-* Visual Line: V
-* Visual Block: Ctrl-v
+* Visual: `v`
+* Visual Line: `V`
+* Visual Block: `Ctrl-v`
 
-When you make an edit and if you need to repeat it again, type in ‘.’ (Dot) to make the same edit elsewhere
+When you make an edit and if you need to repeat it again, type in `.` (Dot) to make the same edit elsewhere
 
-Replace command
-To replace a single character, Enter ‘r’ . To replace multiple characters Enter ‘R’ 
+**Replace command**
+To replace a single character, Enter `r` . To replace multiple characters Enter `R` 
 
 ### Search Command
-Type ‘/‘ followed by phrase to search for a phrase.
-- To search for the same phrase again, type ’n’
-- To search in the opposite direction ’N’
+Type `/` followed by phrase to search for a phrase.
+- To search for the same phrase again, type `n`
+- To search in the opposite direction `N`
 
 Setting an option to help with search
-- You can set “:set hls” then search as normal to highlight the search
-- “:set is” shows partial matches for a search phrase
-- To switch them off just add “no” to the option after “:set”
+- You can set `:set hls` then search as normal to highlight the search
+- `:set is` shows partial matches for a search phrase
+- To switch them off just add `no` to the option after `:set`
 
 Matching Parenthesis Search
-Type ‘%’ to find a matching ), ], or }
+Type `%` to find a matching ), ], or }
 
 Substitute Command
 Type ‘:s/old/new/g’ to substitute new for old in a line (all occurrences)

@@ -60,20 +60,20 @@ It is good practice to write shebang lines using the (env) command that will res
 - ENV makes use of the PATH environment variable
 - `#!/usr/bin/env python`
 
+---
 
-
-Finding how to use commands
+### Finding how to use commands
 Sometimes manages provide too much detail, TLDR pages are complimentary solution that focuses on giving example use cases of a command
 
 Finding files 
-The command ‘fd’ is simple and fast alternative to ‘find’ command
+The command `fd` is simple and fast alternative to ‘find’ command
 
 Finding the code
-Use grep , a generic tool for matching patterns from the input text
-Many alternatives have been developed, including ack, ag, and rg
+Use `grep` , a generic tool for matching patterns from the input text
+Many alternatives have been developed, including `ack`, `ag`, and `rg`
 
 Finding shell commands
-The  ‘history’ command will let you access your shell history programmatically
+The `history` command will let you access your shell history programmatically
 - Most shells, you can make use of ‘Ctrl + R’ to perform backwards search through your history
 - Type substring you want to match for commands
 

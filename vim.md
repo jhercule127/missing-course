@@ -30,7 +30,9 @@ Vim maintains a set of open files called “buffers”. A Vim sessions has a num
 Enter “:sp”
 
 
-Vim is a programming language 
+## Vim is a programming language 
+
+
 
 ### Movement
 You should spent most of your time in Normal time
@@ -56,8 +58,9 @@ c{motion} change {motion}
 - s substitute character (equal to cl)
 
 **How to copy and paste?**
-y to copy / “yank” (some other commands like d also copy)
-- p to paste
+
+Press `y` to copy / “yank” (some other commands like d also copy)
+- Then press `p` to paste
 
 You can highlight words in Visual mode and then copy/paste. To copy a whole line use ‘yy’ 
 
@@ -75,7 +78,7 @@ When you make an edit and if you need to repeat it again, type in ‘.’ (Dot) 
 Replace command
 To replace a single character, Enter ‘r’ . To replace multiple characters Enter ‘R’ 
 
-Search Command
+### Search Command
 Type ‘/‘ followed by phrase to search for a phrase.
 - To search for the same phrase again, type ’n’
 - To search in the opposite direction ’N’
@@ -92,6 +95,7 @@ Substitute Command
 Type ‘:s/old/new/g’ to substitute new for old in a line (all occurrences)
 - To change every occurrence in the whole file: :%s/old/new/g or for confirmation :%s/old/new/gc
 
+### Miscellaneous
 
 Execute external command:
 Enter “:!” Then type in any command
@@ -113,7 +117,6 @@ Press CTRL+D to see list of commands that start with something (possible complet
 Pressing <TAB> will get Vim to complete (one completion)
 
 For help on the vimrc file you look at “:help vimrc-intro"
-
 
 
 

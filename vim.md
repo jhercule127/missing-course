@@ -13,9 +13,13 @@ Modes:
 - **CMD** - running a command
 
 Insert - Enter `I`
+
 Replace - Enter `R`
+
 Visual - Enter `v`
+
 Command-line - Enter `:`
+
 Enter `ESC` to go back to normal mode
 
 Vim config by defaults -> look at lecture notes
@@ -56,6 +60,9 @@ c{motion} change {motion}
 - like d{motion} followed by i
 - x delete character (equal do dl)
 - s substitute character (equal to cl)
+
+
+To append NEXT to the cursor, Enter “a” and make edits
 
 ### Modifiers
 You can use modifiers to change the meaning of a noun. Some modifiers are `i`, which means "inner" or "inside"
@@ -112,23 +119,22 @@ Type `:s/old/new/g` to substitute new for old in a line (all occurrences)
 **Execute external command**
 Enter `:!` Then type in any command
 
-Selecting Text to write
+**Selecting text to write to a file**
 - Type `v` and move the cursor to highlight texts you want to write
-- Press the “:” and type “w TEST”
+- Press the `:` and type `w TEST`
 It should write the selected lines to the file TEST
 
-Also “:r FILENAME” retrieves the FILENAME and puts it below the cursor position
+Also `:r FILENAME` retrieves the FILENAME and puts it below the cursor position
 
-Cool tip: “:r !ls” reads the output of the command and puts it below the cursor
+Cool tip: `:r !ls` reads the output of the command and puts it below the cursor
 
-To append NEXT to the cursor, Enter “a” and make edits
 
-Command Line completion **
-Make sure Vim is not in compatible mode - “:set nocp”
-Press CTRL+D to see list of commands that start with something (possible completions)
-Pressing <TAB> will get Vim to complete (one completion)
+**Command Line completion**
+Make sure Vim is not in compatible mode - `:set nocp`
+- Press CTRL+D to see list of commands that start with something (possible completions)
+- Pressing <TAB> will get Vim to complete (one completion)
 
-For help on the vimrc file you look at “:help vimrc-intro"
+For help on the vimrc file you look at `:help vimrc-intro`
 
 
 

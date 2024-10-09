@@ -25,21 +25,22 @@ Another command is `awk`
 
 For example  ```awk ‘{print $2}’ | paste -sd```, this prints out the second column
 
-awk programs take the form of an optional pattern plus a block saying what to do if the pattern matches a given line.
-Awk is a programming language
+`awk` programs take the form of an optional pattern plus a block saying what to do if the pattern matches a given line.
+> [!TIP]
+> Awk is a programming language
 
 
-Analyzing data,
+## Analyzing data
 There are other tools such as `bc`, a calculator that can from STDIN
 
 Arguments wrangling
-- Sometimes you want to do data wrangling to find things to install or remove base on some longer list
-- xargs can be a powerful tool
+- Sometimes you want to do data wrangling to find things to install or remove based on some longer list
+- `xargs` can be a powerful tool
 
 The xargs takes of lines of input and turns them into arguments
-
+``` bash
 rustup toolchain list | grep nightly | grep -vE "nightly-x86" | sed 's/-x86.*//' | xargs rustup toolchain uninstall
-
+```
 
 
 Exercises DATA WRANGLING

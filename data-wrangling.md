@@ -50,7 +50,7 @@ Exercise 1: Find the number of words (in /usr/share/dict/words) that contain at 
 
 Exercise 2: Redirecting output to same file? It is not unique to sed; it applies to other command-line tools and scripts where output redirection is used. If you overwrite a file while simultaneously trying to read from it, you face similar risks of data corruption or loss.
 
-> [!WARN]
+> [!WARNING]
 > DO NOT DO sed s/REGEX/SUBSTITUTION/ input.txt > input.txt
 
 Exercise 3: For the exercise on mls.csv I used 

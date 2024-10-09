@@ -1,31 +1,29 @@
 
-
-Data Wrangling
-
-Have data in one format and transform to another format. To wrangle data, we need two things: data to wrangle, and something to do with it
+# Data Wrangling
+To have data in one format and transform to another format. To wrangle data, we need two things: data to wrangle, and something to do with it
 
 
-The `sed` is a stream editor that builds on top of the old `ed` editor. Short commands for how to modify the file
-The s command is written on the form: `s/REGEX/SUBSTITUION/
+The `sed` is a stream editor that builds on top of the old `ed` editor. 
+Short commands for how to modify the file, `s` command is written on the form: `s/REGEX/SUBSTITUION/`
 
+## Regular Expressions
+Regular expressions are common ,here are some very common patterns:
+* `.` means “any single character” except newline
+* `*` zero or more of the preceding match
+* `+` one or more of the preceding match
+* `[abc]` any one character of a, b, and c
+* `(RX1|RX2)` either something that matches RX1 or RX2
 
-Regular expressions are common.Very common patterns:
-* . means “any single character” except newline
-* * zero or more of the preceding match
-* + one or more of the preceding match
-* [abc] any one character of a, b, and c
-* (RX1|RX2) either something that matches RX1 or RX2
+Well, `*` and `+` are, by default, “greedy”. They will match as much text as they can. In some regular expression implementations, you can just suffix * or + with a ? to make them non-greedy
 
-Well, * and + are, by default, “greedy”. They will match as much text as they can. In some regular expression implementations, you can just suffix * or + with a ? to make them non-greedy
-
-
-Another command that is helpful for data wrangling is sort and uniq
+## More Wrangling
+Another command that is helpful for data wrangling is `sort` and `uniq`
 - Command `uniq -c` will collapse consecutive lines that are the same into a single line and count number of occurrences
 
-Another command is Awk
-Column-based stream processor, more focused on columned data
-For example  awk ‘{print $2}’ | paste -sd
-- Prints out the second column
+Another command is `awk`
+- Column-based stream processor, more focused on columned data
+
+For example  ```awk ‘{print $2}’ | paste -sd```, this prints out the second column
 
 awk programs take the form of an optional pattern plus a block saying what to do if the pattern matches a given line.
 Awk is a programming language

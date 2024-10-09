@@ -43,17 +43,18 @@ rustup toolchain list | grep nightly | grep -vE "nightly-x86" | sed 's/-x86.*//'
 ```
 
 
-Exercises DATA WRANGLING
-1.
+## Exercises
+Exercise 1: Find the number of words (in /usr/share/dict/words) that contain at least three as and don’t have a 's ending. What are the three most common last two letters of those words? 
 
-sed -E -n "/.*a.*a.*a[^'s]$/p" /usr/share/dict/words | awk '{for (i=1; i<=NF; i++) print substr($i, length($i)-1, 2)}' | sort | uniq -c | sort -nk1,1 | tail -n 3
+`sed -E -n "/.*a.*a.*a[^'s]$/p" /usr/share/dict/words | awk '{for (i=1; i<=NF; i++) print substr($i, length($i)-1, 2)}' | sort | uniq -c | sort -nk1,1 | tail -n 3`
 
-2. Redirecting output to same file? It is not unique to sed; it applies to other command-line tools and scripts where output redirection is used. If you overwrite a file while simultaneously trying to read from it, you face similar risks of data corruption or loss.
+Exercise 2: Redirecting output to same file? It is not unique to sed; it applies to other command-line tools and scripts where output redirection is used. If you overwrite a file while simultaneously trying to read from it, you face similar risks of data corruption or loss.
 
 DO NOT DO sed s/REGEX/SUBSTITUTION/ input.txt > input.txt
 
-3. For the exercise on mls.csv I used 
-awk -F, '{ print $6, $7 }' mls.csv | tail -n +2
+Exercise 3: For the exercise on mls.csv I used 
+
+`awk -F, '{ print $6, $7 }' mls.csv | tail -n + 2`
 
 
 

@@ -24,9 +24,12 @@ Enter `ESC` to go back to normal mode
 
 Vim config by defaults -> look at lecture notes
 Some commands:
+
 `:q` - quits
+
 `:w` - saves file
-:help <topic> - shows docs for topic
+
+`:help <topic>` - shows docs for topic
 
 
 Vim maintains a set of open files called “buffers”. A Vim sessions has a number of tabs each of which has number of windows

@@ -11,14 +11,15 @@ Killing a process - your shell is using a UNIX communication mechanism called a 
 More generic signal for asking a process to exit gracefully is the `SIGTERM` signal
 - To send this signal use the `kill` command
 
-Pausing and backgrounding processes
+**Pausing and backgrounding processes**
 For instance `SIGSTOP` pauses a process, typing `Ctrl-Z` will prompt shell to send a `SIGSTOP`
 - Can continue the paused job in foreground or background using `fg` or `bg`
+
 
 The `&` suffix in a command will run the command in the background. 
 - For example `sleep 1000 &`
 
-> [!INFO]
+> [!TIP]
 > Backgrounded processes are still children processes of your terminal 
 > Can use `nohup` to prevent that from happening
  
@@ -47,30 +48,34 @@ If you’re interested in customizing your tmux experience I recommend that you 
 ### Aliases
 
 Most shells support aliasing, a shell alias is a short form for another command that your shell will replace automatically for you
-alias alias_name="command_to_alias arg1 arg2"
+
+**How to create alias?**
+`alias alias_name="command_to_alias arg1 arg2"`
+
 To make them persistent you need them in shell startup files
 
 
 
 ## Dotfiles
 
-Many programs are configured using plain-text files known as dotfiles (because the file names begin with a ., e.g. ~/.vimrc, so that they are hidden in the directory listing ls by default).
+Many programs are configured using plain-text files known as **dotfiles** (because the file names begin with a (.), e.g. `~/.vimrc`, so that they are hidden in the directory listing ls by default).
 
 Some other examples of tools that can be configured through dotfiles are:
-* bash - ~/.bashrc, ~/.bash_profile
-* git - ~/.gitconfig
+* bash - `~/.bashrc`, `~/.bash_profile`
+* git - `~/.gitconfig`
 
-How should you organize your dotfiles? They should be in their own folder, under version control, and symlinked into place using a script. 
+**How should you organize your dotfiles?** They should be in their own folder, under version control, and symlinked into place using a script. 
 * Synchronization: you can update your dotfiles anywhere and keep them all in sync.
 * Change tracking: you’re probably going to be maintaining your dotfiles for your entire programming career, and version history is nice to have for long-lived projects.
 
-What should you put in your dotfiles? You can learn about your tool’s settings by reading online documentation or man pages. 
+**What should you put in your dotfiles?** You can learn about your tool’s settings by reading online documentation or man pages. 
 
-Portability for dot files
+### Portability for dot files
 If the configuration file supports it, use the equivalent of if-statements to apply machine specific customizations.
-# Check before using shell-specific features
-if [[ "$SHELL" == "zsh" ]]; then {do_something}; fi
 
-# You can also make it machine-specific
-if [[ "$(hostname)" == "myServer" ]]; then {do_something}; fi
+Check before using shell-specific features
+`if [[ "$SHELL" == "zsh" ]]; then {do_something}; fi`
+
+You can also make it machine-specific
+`if [[ "$(hostname)" == "myServer" ]]; then {do_something}; fi`
 

@@ -31,6 +31,12 @@ Allows you to multiplex terminal windows using panes and tabs so you can interac
 - Let you detach a current terminal sessions and reattach at some point later
 - The command is `tmux`
 
+`tmux` expects you to know its keybindings, and they have the form `<C-b>`
+- it means press `Ctrl+b`, release `Ctrl+b` and then press x
+
+
+
+
 ### Hierarchy of objects
 Session - they are independent workspaces with one or more windows
 Windows - they are separate parts of the same session

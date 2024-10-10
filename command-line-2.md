@@ -47,7 +47,8 @@ What if a remote server does not have its ports directly available through the n
 
 This is called port forwarding and has two flavors: Local Port Forwarding and Remote Port Forwarding
 
-Use Local Port Forwarding when you need to access a service on a remote server securely from your local machine.
+**Use Local Port Forwarding when you need to access a service on a remote server securely from your local machine.**
 ![Alt text](./localhost.png)
 
 Use Remote Port Forwarding when you want to allow external access to a service running on your local machine from a remote server.
+![Alt text](./yourhost.png)

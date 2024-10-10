@@ -40,11 +40,14 @@ Host *.mit.edu
 Server side configuration is usually specified in /etc/ssh/sshd_config
 ```
 
-Port Forwarding
+### Port Forwarding
+
 Many scenarios you will run into software that listens to specific ports in the machine.
 What if a remote server does not have its ports directly available through the network/internet?
 
+This is called port forwarding and has two flavors: Local Port Forwarding and Remote Port Forwarding
 
-Local Port Forwarding
-A service in the remote machine listens in a port and you want to link a port in your LOCAL MACHINE to forward to the remote port
+Use Local Port Forwarding when you need to access a service on a remote server securely from your local machine.
+![Alt text](./localhost.png)
 
+Use Remote Port Forwarding when you want to allow external access to a service running on your local machine from a remote server.

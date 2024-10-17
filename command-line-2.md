@@ -52,3 +52,43 @@ This is called port forwarding and has two flavors: Local Port Forwarding and Re
 
 Use Remote Port Forwarding when you want to allow external access to a service running on your local machine from a remote server.
 ![Alt text](./yourhost.png)
+
+
+
+### Exercises
+1. Question: Now use pgrep to find its pid and pkill to kill it without ever typing the pid itself. 
+- Answer: `pgrep sleep and pkill sleep (had to install proctools)`
+
+2. Question: Write a bash function called pidwait that takes a pid and waits until the given process completes. You should use sleep to avoid wasting CPU unnecessarily.
+- Answer:
+```
+pidwait(){
+   local pid=$1
+   check_process=$(kill -0 "$pid")
+   while $check_process; do
+       echo "checking $pid" 
+       sleep 1
+       check_process=$(kill -0 "$pid")
+   done	   
+   echo "done waiting!"
+
+}
+
+```
+
+3. I followed this tutorial: https://hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
+
+**Aliasing**
+
+
+1. Create an alias dc that resolves to cd for when you type it wrongly.
+- Answer: Changed `clear` to `cl` alias
+
+2. Run `history | awk '{$1="";print substr($0,2)}' | sort | uniq -c | sort -n | tail -n 10 to get your top 10 most used commands`
+
+**Dotfiles**
+
+I cloned this repo:  https://github.com/anishathalye/dotfiles/tree/master. I need to check what to include in `~/.vimrc` and `/.zshrc`
+- also check out what was done to `~/.tmux` 
+
+**See Tmux docs on the lecture page for customization**

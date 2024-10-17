@@ -132,10 +132,37 @@ Also `:r FILENAME` retrieves the FILENAME and puts it below the cursor position
 Cool tip: `:r !ls` reads the output of the command and puts it below the cursor
 
 
+### Vim Configuration
 **Command Line completion**
 Make sure Vim is not in compatible mode - `:set nocp`
 - Press CTRL+D to see list of commands that start with something (possible completions)
 - Pressing <TAB> will get Vim to complete (one completion)
+
+**More**
+To turn on file detection:
+`filetype plugin indent on`
+
+To make search case insensitive
+`set ignorecase`
+`set smartcase`
+
+To enable searching as you type
+`set incsearch`
+
+To enable highlighting when searching
+`set hlsearch`
+
+To help see changes when you make updates
+```
+if !exists(":DiffOrig")
+   command DiffOrig vert new | set bt=nofule | r # | 0d_ | diffthis
+         \ | wincmd p | diffthis
+endif
+```
+
+
+
+
 
 For help on the vimrc file you look at `:help vimrc-intro`
 

@@ -28,3 +28,25 @@ Is a special reference called “HEAD”
 
 Repositories
 A repository is the data objects and references
+
+
+
+## Staging Area
+This is a way you might imagine of implementing snapshotting , to have a 
+“Create snapshot” command
+- Git accommodates scenarios by allowing you to specify which modifications should be included
+
+Helpful commands
+`git log --all --graph --decorate`: visualizes history as a DAG
+`git diff <filename>`: show changes you made relative to the staging area
+
+**Remote**
+`git branch --set-upstream-to=<remote>/<remote branch>`: set up correspondence between local and remote branch
+
+**Advanced**
+`git blame`: show who last edited which line
+`git stash`: temporarily remove modifications to working directory
+
+For deleting sensitive data from git history
+- https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
+

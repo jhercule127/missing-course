@@ -50,3 +50,15 @@ Helpful commands
 For deleting sensitive data from git history
 - https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
 
+
+
+### Exercises
+2. Clone the repository
+  -  git log --all --graph --decorate (SHOWS GRAPH)
+  -  Answer: Author: j-s-ashley <jashley6@vols.utk.edu>
+  -  cmd: git blame _config.yaml to get line
+  -  git show - shows the commit
+3. Sensitive info removal
+4. Git stash can be used to make changes, save them away the put them on a new branch
+5. Add GIT ALIASES TO ~/.gitconfig
+6. ~/.gitignore_global can be used to ignore specific temporary files

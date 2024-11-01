@@ -98,6 +98,17 @@ When you make an edit and if you need to repeat it again, type in `.` (Dot) to m
 **Replace command**
 To replace a single character, Enter `r` . To replace multiple characters Enter `R` 
 
+If you're in insert mode:
+* Ctrl+d - shift left
+* Ctrl+t - shift right
+
+If you're in normal mode:
+* Shift+<< - shift current line left
+* Shift+>> - shift current line right
+
+
+
+
 ### Search Command
 Type `/` followed by phrase to search for a phrase.
 - To search for the same phrase again, type `n`
@@ -130,6 +141,11 @@ It should write the selected lines to the file TEST
 Also `:r FILENAME` retrieves the FILENAME and puts it below the cursor position
 
 Cool tip: `:r !ls` reads the output of the command and puts it below the cursor
+
+While running vim:
+1. :sp filename for a horizontal split
+2. :vsp filename or :vs filename for a vertical split
+
 
 
 ### Vim Configuration

@@ -70,6 +70,7 @@ CPU PROFILER
 There are 2 main types of CPU profilers: tracing and sampling
 
 **Tracing keeps a record of every function call your program makes**
+
 **Sampling probe your program periodically and record the program’s stack**
 
 

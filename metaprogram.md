@@ -50,3 +50,10 @@ The common standard is semantic versioning. With semantic versioning, every vers
 * If a new release does not change the API, increase the patch version.
 * If you add to your API in a backwards-compatible way, increase the minor version.
 * If you change the API in a non-backwards-compatible way, increase the major version.
+
+
+When working with dependency management systems, you may also come across the notion of lock files
+- A lock file is simply a file that lists the exact version you are currently depending on of each dependency
+
+There are many reasons for this, such as avoiding unnecessary recompiles, having reproducible builds, or not automatically updating to the latest version (which may be broken)
+

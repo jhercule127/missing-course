@@ -111,4 +111,18 @@ Analyzing the performance of a program can be done with understanding the actual
 If you want to test these tools you can also artificially impose loads on the machine using the `stress` command
 
 
+## Exercises
+1. Did the following tutorial: https://github.com/spiside/pdb-tutorial
+- there are 5 `pdb` commands
 
+1. `l` (list) - displays 11 lines around the current line or continue the previous listing
+2. `s` (step) - execute the current line
+3. `n (next) - continue the execution until the next line in the current function is reached
+4. `b` (break) - set a breakpoint
+5. `r` (return) - continue execution until the current function returns
+
+2. The next exercise was installing `shellcheck` to check a bash script
+
+### Profiling
+1. Opened a web server to listen to it on another terminal to look for PID and killed it 
+2. Downloaded `stress` and `htop`

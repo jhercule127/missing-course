@@ -57,3 +57,20 @@ When working with dependency management systems, you may also come across the no
 
 There are many reasons for this, such as avoiding unnecessary recompiles, having reproducible builds, or not automatically updating to the latest version (which may be broken)
 
+
+## Continuous Integration Systems
+As you work on large projects, you’ll find that there are often additional tasks you have to do whenever you make a change to it
+- Continuous Integration is an umbrella term for “stuff that runs whenever your code changes”
+
+
+Open-source projects - some of the big ones are Travis CI, Azure Pipelines, and GitHub Actions
+
+
+### Brief of Testing
+Most large software projects come with a “test suite”
+- Test suite is a collective term for all the tests
+- Unit Test: a micro test that tests a specific feature in isolation
+- Integration test: a macro test that runs a larger part of the system to check a different feature or components work together
+- Mocking: to replace a function type with a fake implementation to avoid testing unrelated functionality
+
+

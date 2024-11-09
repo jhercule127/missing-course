@@ -100,7 +100,33 @@ Password managers
 * Password managers make it convenient to use unique, randomly generated high-entropy passwords for all your logins, and 
 * they save all your passwords in one place, encrypted with a symmetric cipher with a key produced from a passphrase using a KDF
 
+## SSH
 
 
+When you run `ssh-keygen`, it generates an asymmetric key pair,
 
+"public_key" and "private_key"
+- Generated randomly, using entropy provided by the operating system
 
+Public key is stored as-is (its public)
+
+Private key should be encrypted on disk
+
+**ssh_keygen** prompts user for a passphrase and this is fed through
+KDF to produce a key, then used to encrypt the private key with a symmetric
+cipher
+
+Once the server knows the client's private key (stored in `.ssh/authorized_keys`)
+- a connecting client can prove its identity using asymmetric signatures
+
+## Exercises
+1. Finished part 1 - entropy
+2. Finished part 2
+- Coreutils is a package of basic file, shell and text manipulation utilities that are part of the GNU project
+- Installed wget and used sha256sum to build sha256 and compared it to the one I downloaded
+
+3. Finished part 3 (symmetric cryptography)
+- Encrypted a file with `openssl`, saw contents
+- Decrypted it after with a `openssl` command and then confirmed the contents with cmp
+
+ 

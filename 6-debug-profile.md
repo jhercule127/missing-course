@@ -91,7 +91,7 @@ One common way to display CPU profiling information for sampling profilers is to
 Call graphs or control flow graphs display the relationships between subroutines within a program by including functions as nodes and functions calls between them as directed edges
 - For example in Python you can use pycallgraph
 
-![Visual png](./visual.png)
+![Visual png](./pictures/visual.png)
 
 
 ### Resource Monitoring
